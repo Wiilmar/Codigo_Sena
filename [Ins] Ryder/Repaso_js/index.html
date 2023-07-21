@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Riderrrrr</title>
+</head>
+<body>
+    <table style="border: 1px; border-style: solid; border-color: black;">
+        <tr>
+            <td>
+                <h3> Nombre: </h3>
+            </td>
+            <td>
+                <input type="text" id="Nombre_user">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h3> Mes </h3>
+            </td>
+            <td> 
+                <select name="Meses" id="Lista_Meses">
+                    <option value="" disabled selected> Selecciona un mes</option>
+                    <option value="Enero">Enero</option>
+                    <option value="Febrero">Febrero</option>
+                    <option value="Marzo">Marzo</option>
+                    <option value="Abril">Abril</option>
+                    <option value="Mayo">Mayo</option>
+                    <option value="Junio">Junio</option>
+                    <option value="Julio">Julio</option>
+                    <option value="Agosto">Agosto</option>
+                    <option value="Septiembre">Septiembre</option>
+                    <option value="Octubre">Octubre</option>
+                    <option value="Noviembre">Noviembre</option>
+                    <option value="Diciembre">Diciembre</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h3> Año </h3>
+            </td>
+            <td>
+                <select name="año" id="Lista_Año">
+                    <option value="" disabled selected> Selecciona un año</option>
+                    <option value="2013">2013</option>
+                    <option value="2014">2014</option>
+                    <option value="2015">2015</option>
+                    <option value="2016">2016</option>
+                    <option value="2017">2017</option>
+                    <option value="2018">2018</option>
+                    <option value="2019">2019</option>
+                    <option value="2020">2020</option>
+                    <option value="2021">2021</option>
+                    <option value="2022">2022</option>
+                    <option value="2023">2023</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h3> Trimestre </h3>
+            </td>
+            <td>
+                <input type="text" name="" id="Texto_trimestre" placeholder="Ingresa el trimestre">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label><input type="radio" name="Premio" value="Gano" id="seccion1"> Aprobo</label><br>
+            </td>
+            <td>
+            
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label><input type="radio" name="Premio" value="Perdio" id="seccion2"> Desaprobo </label><br>
+            </td>
+        </tr>
+        <tr>  
+            <td>
+                <h3> Competencia </h3>
+            </td>
+            <td>
+                <input type="text" name="" id="competencia" placeholder="Ingresa la competencia">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" value="datos" onclick="document.getElementById(datos3(Nombre_user.value,Lista_Meses.value,Lista_Año.value,Texto_trimestre.value, ( escoger = document.querySelector('input[name=Premio]:checked')).value,competencia.value))">
+            </td>
+        </tr>
+    </table>
+    <p id="mensaje"> Esperando resultados... </p>
+    <script src="java.js"></script>
+</body>
+</html>
