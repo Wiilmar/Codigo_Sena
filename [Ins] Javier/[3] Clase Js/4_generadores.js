@@ -16,7 +16,7 @@ console.log(iterador.next())
 console.log(iterador.next())
 */
 function *RPM (datos) {
-    for (let a=0; a<=4; a++) {
+    for (let a=0; a<=3; a++) {
         yield datos[a];
     }
 }
