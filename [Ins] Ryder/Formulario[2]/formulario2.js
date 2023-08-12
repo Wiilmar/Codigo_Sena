@@ -60,8 +60,6 @@ function porcentaje_notas () {
     console.log("------------------------------------"); 
 }
 
-
-
 //funciones por valores y referencias
 //callbacks
 //promesas
