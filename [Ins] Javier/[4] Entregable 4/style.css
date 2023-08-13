@@ -254,7 +254,7 @@ header nav{
     z-index: 1;
     right: 0;
     top: 0;
-    width: 500px;
+    width: 300px;
     height: 100%;
     overflow: auto;
     box-shadow: -2px 0px 20px 5px black  ;
@@ -271,7 +271,7 @@ header nav{
     flex-grow: 1;
     text-align: center;
     width: 100%;
-    padding-left: 70px;
+    padding-left: 35px;
     padding-top: 5px;
 }
 
@@ -296,13 +296,101 @@ header nav{
 }
 
 .reservas_modal {
-    background-color: blue;
-    margin-top: 12px;
+    margin: 12px;
     width: auto;
-    height: 30px;
+    height: auto;
 }
 
+.Total_reserva {
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+    background-color: white;
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: bolder;
 
+}
+/* ---------------------------------- */
+
+/* Productos*/
+.Producto_1 {
+    display: none;
+    height: auto;
+    width: 100%;
+    background-color: #FCBA1E;
+    margin-bottom: 10px;
+
+}
+.Titulo_producto1{
+    background-color: #825e11;
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.Cotenido_producto1 {
+    display: flex;
+    flex-direction: row;
+}
+/* -- -- - -- - - - - */
+.Producto_2 {
+    display: none;
+    height: auto;
+    width: 100%;
+    background-color: #FCBA1E;
+    margin-bottom: 10px;
+}
+.Titulo_producto2{
+    background-color: #825e11;
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.Cotenido_producto2 {
+    display: flex;
+    flex-direction: row;
+}
+/* -- -- - -- - - - - */
+.Producto_3 {
+    display: none;
+    height: auto;
+    width: 100%;
+    background-color: #FCBA1E;
+    margin-bottom: 10px;
+}
+.Titulo_producto3{
+    background-color: #825e11;
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.Cotenido_producto3 {
+    display: flex;
+    flex-direction: row;
+}
+/* -- -- - -- - - - - */
+.Producto_4 {
+    display: none;
+    height: auto;
+    width: 100%;
+    background-color: #FCBA1E;
+    margin-bottom: 10px;
+}
+.Titulo_producto4{
+    background-color: #825e11;
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.Cotenido_producto4 {
+    display: flex;
+    flex-direction: row;
+}
+/* -- -- - -- - - - - */
 /* footer */
 .Pie {
     background-color: black;
