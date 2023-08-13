@@ -10,7 +10,7 @@
 <body>
     <header class="cabeza">
         <div class="Icono">
-            <img src="./imagenes/Icono.png" alt="" width="40px" >
+            <a href="http://"><img src="./imagenes/Icono.png" alt="" width="60px" ></a>
         </div>
         <nav>
             <a href="">Top</a>
@@ -18,12 +18,12 @@
             <a href="">PQRS</a>
         </nav>
         <div class="icono_carro">
-            <img id="carrito_compras" src="./imagenes/icono_carro.png" alt="" width="30px">
+            <img id="carrito_compras" src="./imagenes/icono_carro.png" alt="" width="35px">
         </div>
     </header>
     <main>
         <div class="contenedor_imagen">
-            <p style="font-size: 4rem;"><b>Bienvenido! Motoviajer@</b></p>
+            <p style="font-size: 4rem; color: white;"><b>Bienvenido, Motoviajer@</b></p>
         </div>
         <div class="contenedor_texto">
             <h2>Escoge las mejores motoposadas cerca de tu area</h2>
@@ -39,7 +39,7 @@
                         <h4 style="color: white;"> Cali, Colombia -  &#36;30&#46;000</h4>
                     </div>
                     <div class="contenedor_boton_card1">
-                        <input class="Boton" type="button" value="Reservar" onclick="comparador()">
+                        <input id='boton_1' type="button" value="Reservar">
                     </div>
                 </div>
             </div>
@@ -53,7 +53,7 @@
                         <h4 style="color: white;"> Tulua, Colombia -  &#36;15&#46;000</h4>
                     </div>
                     <div class="contenedor_boton_card2">
-                        <input class="Boton" type="button" value="Reservar" onclick="comparador()">
+                        <input id='boton_2' type="button" value="Reservar">
                     </div>
                 </div>
             </div>
@@ -67,7 +67,7 @@
                         <h4 style="color: white;"> Popayan, Colombia -  &#36;20&#46;000</h4>
                     </div>
                     <div class="contenedor_boton_card3">
-                        <input class="Boton" type="button" value="Reservar" onclick="comparador()">
+                        <input id='boton_3' type="button" value="Reservar">
                     </div>
                 </div>
             </div>
@@ -81,12 +81,26 @@
                         <h4 style="color: white;"> Pasto, Colombia -  &#36;60&#46;000</h4>
                     </div>
                     <div class="contenedor_boton_card4">
-                        <input class="Boton"  type="button" value="Reservar" onclick="comparador()">
+                        <input id="boton_4"  type="button" value="Reservar">
                     </div>
                 </div>
             </div>
         </div>
     </main>
+    <div class="Icono_yecid">
+        <a href="https://devisitaporelmundo.com"><img src="./imagenes/logo_yecid.png" alt="Logo yecid" width="60px"></a>
+    </div>
+    <div class="ventana_modal">
+        <div class="contenido_modal">
+            <div class="texto_modal">
+                <h1>Reservas</h1>
+            </div>
+            <input class="diseno_boton_x" id="cerrar_modal" type="button" value="x" >  
+        </div>
+        <div class="reservas_modal" id="caja_producto">
+
+        </div>
+    </div>
     <footer class="Pie">
         <h3 class="texto_footer"> Derechos Reservados &copy; </h3>
     </footer>
