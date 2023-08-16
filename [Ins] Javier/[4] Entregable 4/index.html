@@ -28,7 +28,7 @@
         <div class="contenedor_texto">
             <h2>Escoge las mejores motoposadas cerca de tu area</h2>
         </div>
-        <div class="contenedor_cards">
+        <div class="contenedor_cards" id="Lista_productos">
             <div class="card1">
                 <div class="contenido_card1">
                     <img src="./imagenes/casa1.jpg" alt="" width=100% height="300px"">
@@ -36,10 +36,10 @@
                         <h4> Casa de las montañas</h4>
                     </div>
                     <div class="precio_ubi_card1">
-                        <h4 style="color: white;"> Cali, Colombia -  &#36;30&#46;000</h4>
+                        <h4 style="color: white;"> Cali, Colombia</h4><h4 style="color: white;" class="precio_card"> 30000</h4>
                     </div>
                     <div class="contenedor_boton_card1">
-                        <input id='boton_1' type="button" value="Reservar">
+                        <input class="agregar" id='boton_1' type="button" value="Reservar" data-id="1">
                     </div>
                 </div>
             </div>
@@ -50,10 +50,10 @@
                         <h4> Casa Box</h4>
                     </div>
                     <div class="precio_ubi_card2">
-                        <h4 style="color: white;"> Tulua, Colombia -  &#36;15&#46;000</h4>
+                        <h4 style="color: white;"> Tulua, Colombia </h4> <h4 style="color: white;" class="precio_card"> 15000</h4>
                     </div>
                     <div class="contenedor_boton_card2">
-                        <input id='boton_2' type="button" value="Reservar">
+                        <input class="agregar" id='boton_2' type="button" value="Reservar" data-id="2">
                     </div>
                 </div>
             </div>
@@ -64,10 +64,10 @@
                         <h4> Casa humilde</h4>
                     </div>
                     <div class="precio_ubi_card3">
-                        <h4 style="color: white;"> Popayan, Colombia -  &#36;20&#46;000</h4>
+                        <h4 style="color: white;"> Popayan, Colombia</h4> <h4 style="color: white;" class="precio_card"> 20000</h4>
                     </div>
                     <div class="contenedor_boton_card3">
-                        <input id='boton_3' type="button" value="Reservar">
+                        <input class="agregar" id='boton_3' type="button" value="Reservar" data-id="3">
                     </div>
                 </div>
             </div>
@@ -78,10 +78,10 @@
                         <h4> Casa del programador </h4>
                     </div>
                     <div class="precio_ubi_card4">
-                        <h4 style="color: white;"> Pasto, Colombia -  &#36;60&#46;000</h4>
+                        <h4 style="color: white;"> Pasto, Colombia </h4> <h4 style="color: white;" class="precio_card"> 60000</h4>
                     </div>
                     <div class="contenedor_boton_card4">
-                        <input id="boton_4"  type="button" value="Reservar">
+                        <input class="agregar" id="boton_4"  type="button" value="Reservar" data-id="4">
                     </div>
                 </div>
             </div>
@@ -97,50 +97,21 @@
             </div>
             <input class="diseno_boton_x" id="cerrar_modal" type="button" value="x" >  
         </div>
-        <div class="reservas_modal" id="caja_producto">
-           <div class="Producto_1">
-                <div class="Titulo_producto1"> 
-                    <p> Casa de las montañas</p>
-                </div>
-                <div class="Cotenido_producto1">
-                    <img src="./imagenes/casa1.jpg" alt="" srcset="" width="20%">
-                    <p style="font-size: 1rem; margin-top: 10px;"> Cali, Colombia</p>
-                    <p style="font-size: 1rem; margin-top: 9px; margin-left: 90px;" id='cantidad_producto1'> x1 </p>
-                </div>
-           </div>
-           <div class="Producto_2">
-                <div class="Titulo_producto2"> 
-                    <p> Casa Box</p>
-                </div>
-                <div class="Cotenido_producto2">
-                    <img src="./imagenes/casa2.jpeg" alt="" srcset="" width="20%">
-                    <p style="font-size: 1rem; margin-top: 10px;"> Tulua, Colombia</p>
-                    <p style="font-size: 1rem; margin-top: 10px; margin-left: 80px;" id="cantidad_producto2"> x1 </p>
-                </div>
-           </div>
-           <div class="Producto_3">
-                <div class="Titulo_producto3"> 
-                    <p> Casa humilde</p>
-                </div>
-                <div class="Cotenido_producto2">
-                    <img src="./imagenes/casa3.jpg" alt="" srcset="" width="20%">
-                    <p style="font-size: 1rem; margin-top: 10px;">Popayan, Colombia</p>
-                    <p style="font-size: 1rem; margin-top: 10px; margin-left: 55px;" id='cantidad_producto3'> x1 </p>
-                </div>
-           </div>
-           <div class="Producto_4">
-                <div class="Titulo_producto4"> 
-                    <p> Casa del programador </p>
-                </div>
-                <div class="Cotenido_producto4">
-                    <img src="./imagenes/casa4.webp" alt="" srcset="" width="20%">
-                    <p style="font-size: 1rem; margin-top: 10px;"> Pasto, Colombia</p>
-                    <p style="font-size: 1rem; margin-top: 10px; margin-left: 80px;" id='cantidad_producto4'> x1 </p>
-                </div>
-            </div>
-       </div>
-       <div class="Total_reserva">
-            <p> Total a pagar: </p>
+        <div class="Informacion_modal">
+            <ul class="Lista_info">
+                <li> Imagen </li>
+                <li> Descripcion </li>
+                <li> Precio </li>
+                <li> Cantidad </li>
+                <li>  &nbsp; &nbsp; &nbsp; </li>
+            </ul>
+        </div>
+        <div class="Lista_carrito" id="listaCarrito">
+            
+        </div>
+       <div class="Cotenedor_Boton_Vaciar_Carrito">
+            <p style="margin-top: 13px;" id="Precio_total"> Total: </p>
+            <input class='Diseno_boton_vaciar_carrito' id="Vaciar" type="button" value="Vaciar Carrito">
        </div>
     </div>
     <footer class="Pie">

@@ -41,6 +41,13 @@ header nav{
     width: 60px;
     height: 50px;
     text-align: center;
+    cursor: pointer;
+}
+
+.icono_carro:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.171);
+
 }
 
 .Icono {
@@ -49,6 +56,7 @@ header nav{
     text-align: center;
     margin-bottom: -5px;
 }
+
 /* ---------------------------------- */
 
 /* Diseño de la portada */
@@ -105,6 +113,7 @@ header nav{
 .contenedor_cards input:hover {
     background-color: rgb(85, 85, 85);
     color: rgb(255, 255, 255);
+    cursor: pointer;
 }
 
 /* Card 1*/
@@ -128,6 +137,9 @@ header nav{
 }
 
 .precio_ubi_card1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
     background-color: #825e11;
     text-align: center;
 }
@@ -161,6 +173,9 @@ header nav{
 }
 
 .precio_ubi_card2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
     background-color: #825e11;
     text-align: center;
 }
@@ -193,6 +208,9 @@ header nav{
 }
 
 .precio_ubi_card3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
     background-color: #825e11;
     text-align: center;
 }
@@ -225,6 +243,9 @@ header nav{
 }
 
 .precio_ubi_card4 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
     background-color: #825e11;
     text-align: center;
 }
@@ -254,7 +275,7 @@ header nav{
     z-index: 1;
     right: 0;
     top: 0;
-    width: 300px;
+    width: 500px;
     height: 100%;
     overflow: auto;
     box-shadow: -2px 0px 20px 5px black  ;
@@ -283,6 +304,7 @@ header nav{
     color: rgb(0, 0, 0);
     font-size: 2rem;
     font-weight: bold;
+    cursor: pointer;
 }
 
 .diseno_boton_x:hover {
@@ -301,95 +323,88 @@ header nav{
     height: auto;
 }
 
-.Total_reserva {
-    position: absolute;
+.Cotenedor_Boton_Vaciar_Carrito {
+    position: sticky;
     width: 100%;
+    height: 50px;
     bottom: 0px;
     background-color: white;
-    text-align: center;
     font-size: 1.2em;
     font-weight: bolder;
+    display: flex;
+    justify-content: space-between;
 
 }
+
+.Diseno_boton_vaciar_carrito {
+    width: 120px;
+    height: 40px;
+    background-color: #FCBA1E;
+    color: black;
+    border-radius: 10px;
+    border: 2px black solid;
+    font-size: 0.8rem;
+    font-weight: bolder;
+    margin-top: 4px ;
+
+}
+.Diseno_boton_vaciar_carrito:hover {
+    background-color: #fcb91ec4;
+    border-color: #825e11;
+    color: #3b1616;
+    cursor: pointer;
+}
+
+.Informacion_modal {
+    width: 100%;
+    height: 22px;
+    background-color: #f7f7f7;
+    padding-top: 4px;
+}
+
+.Informacion_modal li:nth-child(4) {
+    padding-right: 40px;
+}
+
+.Lista_info{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style: none;
+    text-align: center;
+}
+
 /* ---------------------------------- */
-
-/* Productos*/
-.Producto_1 {
-    display: none;
-    height: auto;
-    width: 100%;
-    background-color: #FCBA1E;
-    margin-bottom: 10px;
-
-}
-.Titulo_producto1{
-    background-color: #825e11;
-    text-align: center;
-    font-size: 1.3rem;
-    font-weight: bold;
-}
-
-.Cotenido_producto1 {
+/* ---Acomodar elementos de carrito de compras--------- */
+.Lista_carrito div{
     display: flex;
-    flex-direction: row;
-}
-/* -- -- - -- - - - - */
-.Producto_2 {
-    display: none;
-    height: auto;
-    width: 100%;
-    background-color: #FCBA1E;
-    margin-bottom: 10px;
-}
-.Titulo_producto2{
-    background-color: #825e11;
     text-align: center;
-    font-size: 1.3rem;
-    font-weight: bold;
+    place-items: center;
+    margin: 10px 0 0 0;
+    flex-direction: row;
+    border: solid black ;
+    background-color: rgba(255, 255, 255, 0.637);
 }
 
-.Cotenido_producto2 {
-    display: flex;
-    flex-direction: row;
-}
-/* -- -- - -- - - - - */
-.Producto_3 {
-    display: none;
-    height: auto;
-    width: 100%;
-    background-color: #FCBA1E;
-    margin-bottom: 10px;
-}
-.Titulo_producto3{
-    background-color: #825e11;
-    text-align: center;
-    font-size: 1.3rem;
-    font-weight: bold;
+.Lista_carrito p {
+    width: 300px;
+    font-size: 1.2rem;
 }
 
-.Cotenido_producto3 {
-    display: flex;
-    flex-direction: row;
-}
-/* -- -- - -- - - - - */
-.Producto_4 {
-    display: none;
-    height: auto;
-    width: 100%;
-    background-color: #FCBA1E;
-    margin-bottom: 10px;
-}
-.Titulo_producto4{
-    background-color: #825e11;
-    text-align: center;
-    font-size: 1.3rem;
-    font-weight: bold;
+.Lista_carrito p:last-child span {
+    background-color: red;
+    border-radius: 50%;
+    padding: 5px 10px;
+    color: white;
+    cursor: pointer;
 }
 
-.Cotenido_producto4 {
-    display: flex;
-    flex-direction: row;
+.Lista_carrito img {
+    width: 120px;
 }
+
+
+/* ---------------------------------- */
 /* -- -- - -- - - - - */
 /* footer */
 .Pie {
