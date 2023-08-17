@@ -136,6 +136,7 @@ const productosPagina = document.getElementById("Lista_productos");
 const productosCarro = document.getElementById('listaCarrito');
 
 let reservaciones = []
+let precios = []
 
 //Abrir - cerrrar Modal
 abrir_modal.addEventListener("click", () => {
@@ -161,6 +162,7 @@ function registrar() {
         reservas_usuario()
     })
 }
+
 
 //Esta es la funcion que activara el usuario cuando haga click 
 function agregarproducto(seleccion) {
@@ -192,6 +194,21 @@ function Informacion_card(info_card) {
         id: info_card.querySelector('input').getAttribute('data-id'),
         cantidad: 1
     }
+    
+    suma_total(info_producto.precio)
+    function suma_total (valor) {
+        precios.push(valor)
+        if (precios.length == 0) {
+            console.log("Array vacio")
+        } else {
+            console.log("Array lleno")
+            
+        }
+    
+        
+    }
+    console.log(precios)
+    
     //Revisar si un elemento esta repitiendose en el carrito
     // Comprueba si el elemnto del objeto es igual al elemento ingresado en info_Card 
     const duplicados_card = reservaciones.some(info_card => info_card.id == info_producto.id)
