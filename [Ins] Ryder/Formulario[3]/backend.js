@@ -68,7 +68,7 @@ miBoton.addEventListener("click",()=>{
     })
 })
 
-/* promesas
+/*
 //------------------
 const miDiv = document.querySelector("#midiv")
 const miBoton = document.getElementById("miboton")
