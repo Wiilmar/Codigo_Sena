@@ -1,0 +1,26 @@
+body {
+    background-image: url(./Imagenes/fondo.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.titulo_formulario{
+    backdrop-filter: blur(10px);
+    text-align: center;
+}
+
+.diseño-formulario{
+    width: auto;
+    height: 100%;
+    background-color: aqua;
+    display: grid;
+    grid-column: 2;
+}
+
+.registro_moto {
+    background-color: aquamarine;
+}
+
+.datos_moto {
+    background-color: beige;
+}

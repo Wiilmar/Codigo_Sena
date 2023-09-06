@@ -1,0 +1,1 @@
+El node mon me permite que se actualize automaticamente cuando se cambie de servidor.
