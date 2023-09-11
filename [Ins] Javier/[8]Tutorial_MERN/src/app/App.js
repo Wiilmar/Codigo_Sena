@@ -1,7 +1,16 @@
+import React, { Component } from "react";
+
 class App extends Component {
     render() {
         return (
-            <h1> Hello World</h1>
+            <div>
+                <nav className="light-blue darken-4">
+                    <div className="container">
+                        <a className="brand-logo" href="/"> Mern Stack</a>
+                    </div>    
+                </nav>
+            </div>
         )
     }
 }
+export default App;
