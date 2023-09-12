@@ -7,29 +7,48 @@ class App extends Component {
         this.state = {
             title: '',
             description: '',
-            tasks: []
+            tasks: [],
+            _id: ''
         }
         this.handleChange = this.handleChange.bind(this)
         this.addTask = this.addTask.bind(this)
     }
 
     addTask(e) {
-        fetch('/api/tasks',{
-            method: 'POST',
-            body: JSON.stringify(this.state),
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
-            }
-        })
-        .then(res => res.json())
-        .then(data => {
-            console.log(data)
-            M.toast({html: 'Task Saved'})
-            this.setState({title: '', description: ''})
-            this.fetchTasks()
-        })
-        .catch(err => console.error(err))
+        if(this.state._id) {
+            fetch(`/api/tasks/${this.state._id}`, {
+                method: 'PUT',
+                body: JSON.stringify(this.state),
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                }
+            })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+                M.toast({html: 'Task Updated'})
+                this.setState({title: '', description: '', _id: ''})
+                this.fetchTasks()
+            })
+        } else {
+            fetch('/api/tasks',{
+                method: 'POST',
+                body: JSON.stringify(this.state),
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                }
+            })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+                M.toast({html: 'Task Saved'})
+                this.setState({title: '', description: ''})
+                this.fetchTasks()
+            })
+            .catch(err => console.error(err))
+        }
         e.preventDefault(); //Previene que la pagina se recargue al enviar datos a un formulario
     }
 
@@ -47,19 +66,34 @@ class App extends Component {
     }
 
     deleteTask (id) {
-        fetch(`/api/tasks/${id}` , {
-            method: 'DELETE',
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
-            }
-        })
-        .then(res => res.json())
-        .then(data => {
-            console.log(data)
-            M.toast({html: 'Task Deleted'})
-            this.fetchTasks()
-        })
+        if (confirm("Estas seguro de eliminar el elemento?")) {
+            fetch(`/api/tasks/${id}` , {
+                method: 'DELETE',
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                }
+            })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+                M.toast({html: 'Task Deleted'})
+                this.fetchTasks()
+            })
+        } 
+    }
+
+    editTask(id) {
+        fetch(`/api/tasks/${id}`)
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+                this.setState({
+                    title: data.title,
+                    description: data.description,
+                    _id: data._id
+                })
+            })
     }
 
     handleChange (e) {
@@ -121,10 +155,10 @@ class App extends Component {
                                                         {task.description}
                                                     </td>
                                                     <td>
-                                                        <button className="btn light-blue darken-4" onClick={() => this.deleteTask(task.id)}>
+                                                        <button className="btn light-blue darken-4" onClick={() => this.deleteTask(task._id)}>
                                                             <i className="material-icons"> delete </i>
                                                         </button>
-                                                        <button className="btn light-blue darken-4" style={{margin: '4px'}}>
+                                                        <button onClick={() => this.editTask(task._id)} className="btn light-blue darken-4" style={{margin: '4px'}}>
                                                             <i className="material-icons"> edit </i>
                                                         </button>
                                                     </td>
