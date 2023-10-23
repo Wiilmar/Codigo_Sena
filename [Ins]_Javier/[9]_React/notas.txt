@@ -1,0 +1,1 @@
+Copia la carpeta de react_wr al escritorio para que funcione
