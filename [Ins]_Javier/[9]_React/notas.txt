@@ -3,3 +3,5 @@ Copia la carpeta de react_wr al escritorio para que funcione
 npm i vite -- para instalar el entrono vite
 yarn create vite -- Para crar un proyeco en vite
 yarn dev -- Me permite inicializar vite
+
+React Developer Tools -- Extension de chrome que me permite ver en consola lo que haga en vite
