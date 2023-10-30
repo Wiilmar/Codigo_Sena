@@ -7,3 +7,5 @@ yarn dev -- Me permite inicializar vite
 React Developer Tools -- Extension de chrome que me permite ver en consola lo que haga en vite
 
 <></> o <Fragment> </Fragment> ---  Me permite enviar el codigo de formato jsx necesario dentro de un fragmento (como si fuera un div--- OJO NO ES UN DIV pero es una idea similar, no se usa los divs porque interrumpe o puede alterar el diseño en el css)
+
+No se pueden generar componentes dentro de otros componentes (Funciones flechas dentro de funciones flechas)
