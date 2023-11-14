@@ -1,8 +1,11 @@
 Copia la carpeta de react_wr al escritorio para que funcione
 
-npm i vite -- para instalar el entrono vite
-yarn create vite -- Para crar un proyeco en vite
-yarn dev -- Me permite inicializar vite
+Como crear un proyecto con yarn en entorno de vite (Pasos)
+1) npm i -g yarn //Instala yarn de manera golbal
+2) yarn create vite //Creamos el proyecto y le damos un nombre
+3) cd [Nombre del archivo] //Ingrese al proyecto creado
+4) yarn //Escribimos yarn para instalar los archivos faltantes
+5) yarn dev //Iniciamos nuestro poryecto
 
 React Developer Tools -- Extension de chrome que me permite ver en consola lo que haga en vite
 
