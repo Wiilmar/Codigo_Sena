@@ -1,0 +1,54 @@
+.formContainer {
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: fit-content;
+    gap: 1rem;
+    border: 3px solid #efefef;
+    padding: 2rem;
+}
+
+div {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+input {
+    padding: 0.3rem;
+}
+
+.subirArchivo {
+    width: auto;
+    margin-left: 10%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    background-color: #161616;
+    border: 1px solid transparent;
+    color: white;
+    width: 100%;
+    padding: 1rem;
+    cursor: pointer;
+    transition-duration: 0.3s;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: white;
+    color:
+        #161616;
+    border: 1px solid ☐#161616;
+}
+
+.loader {
+    border: 2px solid #efefef;
+    padding: 1rem;
+    margin-bottom: 2rem;
+}
