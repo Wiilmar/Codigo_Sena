@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
-import { Admin, Analytics, Dashboard, HomeUser, Landing } from './pages'
+import { Admin, Analytics, Dashboard, HomeUser, Landing, Counter } from './pages'
 import { useState } from 'react'
 import { ProtectedRoute } from './components/protectedRoute'
 
@@ -12,7 +12,7 @@ export const App = () => {
     setUser({
       id: 1,
       name: "Wilman",
-      permissions: ['analize'],
+      permissions: ['adso'],
       roles: []
     })
   }
@@ -49,6 +49,11 @@ export const App = () => {
             <Admin />
           </ProtectedRoute>
         } />
+        <Route path='/useref' element={
+          <ProtectedRoute isAllowed={!!user && user.permissions.includes('adso')} redirectTo='/home'>
+            <Counter />
+          </ProtectedRoute>
+        } />
       </Routes>
     </BrowserRouter>
   )
@@ -71,6 +76,9 @@ function Navigation() {
       </li>
       <li>
         <Link to="/admin"> Admin </Link>
+      </li>
+      <li>
+        <Link to="/useref"> Contador </Link>
       </li>
     </ul>
   </nav>
