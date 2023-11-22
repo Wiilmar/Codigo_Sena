@@ -1,0 +1,15 @@
+body {
+  background-color: cadetblue;
+  color: white;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  text-decoration: none;
+  gap: 50px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
